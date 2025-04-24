@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Educativa - Países</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <!-- Pestaña de búsqueda -->
+        <section id="tab-buscar" class="tab active">
+            <header>
+                <h1>Información de los Países</h1>
+                <p>Consulta datos de diferentes países utilizando la REST Countries API.</p>
+            </header>
+            <div class="search">
+                <input type="text" id="country-input" placeholder="Busca un país..." oninput="searchCountry()">
+            </div>
+            <div id="country-info" class="country-info"></div>
+        </section>
+
+        <!-- Pestaña de favoritos -->
+        <section id="tab-favoritos" class="tab">
+            <h2>Países Favoritos</h2>
+            <div id="favoritos" class="country-info"></div>
+        </section>
+
+        <!-- Pestaña 3: Lista de todos los países -->
+        <section id="tab-1" class="tab">
+            <h2>Todos los Países</h2>
+            <div id="todos-los-paises" class="country-info"></div>
+        </section>
+
+        <!-- Pestaña 4: Cuestionario sobre favoritos -->
+        <section id="tab-2" class="tab">
+            <h2>Cuestionario de Favoritos</h2>
+            <div id="quiz-container"></div>
+            <button onclick="generarCuestionario()">🔄 Generar Nuevas Preguntas</button>
+        </section>
+
+
+        <!-- Pestaña informativa -->
+        <section id="tab-info" class="tab">
+            <h2>Información</h2>
+            <p>Correo de contacto: jhonnier.gordom@uniagustiniana.edu.co</p>
+        </section>
+    </main>
+
+    <!-- Menú inferior -->
+    <nav class="bottom-menu">
+        <button onclick="showTab('tab-buscar')">Buscar</button>
+        <button onclick="showTab('tab-favoritos')">Favoritos</button>
+        <button onclick="showTab('tab-1')">Lista</button>
+        <button onclick="showTab('tab-2')">Cuestionario</button>
+        <button onclick="showTab('tab-3')">Tab 3</button>
+        <button onclick="showTab('tab-info')">Info</button>
+    </nav>
+
+    <footer>
+        <p>Creado con 💻 por Jhonnier Felipe Gordo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
